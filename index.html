@@ -1,12 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
+  <title>GAINZ</title>
+
   
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+<nav>
+  
+  <img class="bild" src="img/G.png" alt="GAINZ Logo">
+  
+  <ul class="nav-links" id="navLinks">
+    <li onclick="showPage('home')">Hem</li>
+    <li onclick="showPage('schema')">Schema</li>
+    <li onclick="showPage('membership')">Medlemskap</li>
+    <li onclick="showPage('contact')">Kontakt</li>
+  </ul>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</nav>
+
+
+<section id="page-home" class="page active">
+  <div class="hero">
+    <h2>TRÄNA HÅRDARE</h2>
+    <p>Bli starkare med Gainz</p>
+    <button onclick="openModal()">Bli medlem</button>
+  </div>
+</section>
+
+
+<section id="page-schema" class="page">
+  <h2>Schema</h2>
+  <div id="classGrid"></div>
+</section>
+
+
+<section id="page-membership" class="page">
+  <h2>Medlemskap</h2>
+  <div class="card">Basic – 349 kr</div>
+  <div class="card">Premium – 549 kr</div>
+  <div class="card">VIP – 899 kr</div>
+</section>
+
+
+<section id="page-contact" class="page">
+  <h2>Kontakt</h2>
+  <p>Göteborg</p>
+</section>
+
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()">X</span>
+    <h3>Bli medlem</h3>
+    <input placeholder="Namn">
+    <input placeholder="Email">
+    <button onclick="submitForm()">Skicka</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
