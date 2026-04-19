@@ -5,26 +5,42 @@ body {
   color: white;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links li {
+  color: #888;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-links li:hover {
+  color: #e8ff00;
+}
+
+.menu-btn {
+  display: none;
+}
+
 
 nav {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   background: black;
-}
-
-.logo {
-  color: #e8ff00;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-}
-
-.menu-btn {
-  display: none;
 }
 
 
