@@ -4,21 +4,33 @@ body {
   background: #0a0a0a;
   color: white;
 }
-
+ 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   background: black;
+  border-bottom: 1px solid #222;
 }
-
+ 
+.bild {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+ 
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
-
+ 
 .nav-links li {
   color: #888;
   cursor: pointer;
@@ -26,81 +38,80 @@ nav {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
+ 
 .nav-links li:hover {
   color: #e8ff00;
 }
-
+ 
 .menu-btn {
   display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  background: black;
+ 
+.page {
+  display: none;
+  padding-top: 70px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: 100vh;
 }
-
-
+ 
+.page.active {
+  display: block;
+}
+ 
 .hero {
-  height: 80vh;
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-
-.bild {
-  height: 150px;
-  width: auto;
-  object-fit: contain;
-}
-
-.page {
-  display: none;
-  padding: 2rem;
-}
-
-.page.active {
-  display: block;
-}
-
-
+ 
 .card {
   background: #111;
-  padding: 1rem;
+  padding: 2rem;
   margin: 1rem 0;
 }
-
-
+ 
 .modal {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.8);
 }
-
+ 
 .modal-content {
   background: #222;
   padding: 2rem;
   margin: 10% auto;
   width: 300px;
 }
-
-
-@media(max-width: 700px) {
+ 
+@media (max-width: 700px) {
   .nav-links {
     display: none;
     flex-direction: column;
   }
-
   .nav-links.open {
     display: flex;
+    position: fixed;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid #222;
+    z-index: 999;
   }
-
   .menu-btn {
     display: block;
   }
 }
+ 
