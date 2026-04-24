@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAINZ – Medlemskap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<nav>
+  <img class="bild" src="img/G.png" alt="GAINZ Logo">
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Hem</a></li>
+    <li><a href="schema.html">Schema</a></li>
+    <li><a href="membership.html" class="active">Medlemskap</a></li>
+    <li><a href="contact.html">Kontakt</a></li>
+  </ul>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</nav>
+ 
+<main>
+  <div class="section-header">
+    <h1>Välj Din Plan</h1>
+  </div>
+  <div class="card">Basic – 349 kr</div>
+  <div class="card">Premium – 549 kr</div>
+  <div class="card">VIP – 899 kr</div>
+</main>
+ 
+<footer>
+  <span class="footer-logo">GAINZ</span>
+  <span class="footer-copy">© 2025 Gainz Gym</span>
+</footer>
+ 
+<div id="modal" class="modal">
+  <div cla  ss="modal-content">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>Bli Medlem</h3>
+    <p>Fyll i dina uppgifter så hör vi av oss.</p>
+    <input type="text" id="inputNamn" placeholder="Namn">
+    <input type="email" id="inputEmail" placeholder="Email">
+    <select id="inputPlan">
+      <option>Basic – 349 kr/mån</option>
+      <option>Premium – 549 kr/mån</option>
+      <option>VIP – 899 kr/mån</option>
+    </select>
+    <button onclick="submitForm()">Skicka Ansökan</button>
+  </div>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+ 
