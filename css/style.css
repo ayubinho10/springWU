@@ -76,7 +76,7 @@ main {
     linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)),
     url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80') center/cover no-repeat;
 }
- 
+  
  
 .hero h1 {
   font-family: 'Bebas Neue', sans-serif;
@@ -265,4 +265,33 @@ footer {
   .menu-btn { display: block; }
   .hero h1 { font-size: 3rem; }
 }
+ .stats-bar {
+  background: #e8ff00;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+  margin: 0 -2rem;
+}
  
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #0a0a0a;
+  line-height: 1;
+}
+ 
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.6);
+}
