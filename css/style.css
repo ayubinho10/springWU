@@ -408,5 +408,60 @@ footer {
 .btn-yellow:hover {
   opacity: 0.85;
 }
+.day-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
  
-  
+.day-tab {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #333;
+  background: none;
+  color: #888;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+ 
+.day-tab.active,
+.day-tab:hover {
+  background: #e8ff00;
+  color: #0a0a0a;
+  border-color: #e8ff00;
+}
+ 
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: #222;
+  margin: 0 -2rem 3rem;
+}
+ 
+.class-card {
+  background: #111;
+  padding: 2rem;
+}
+ 
+.class-card:hover { background: #161616; }
+ 
+.class-time {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #e8ff00;
+}
+ 
+.class-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0.3rem 0;
+}
+ 
+.class-meta { font-size: 0.8rem; color: #888; }
+ 

@@ -24,7 +24,18 @@
   <div class="section-header">
     <h1>Schema</h1>
   </div>
-  <div id="classGrid"></div>
+ 
+  <div class="day-tabs">
+    <button class="day-tab active" onclick="setDay(this, 'man')">Mån</button>
+    <button class="day-tab" onclick="setDay(this, 'tis')">Tis</button>
+    <button class="day-tab" onclick="setDay(this, 'ons')">Ons</button>
+    <button class="day-tab" onclick="setDay(this, 'tor')">Tor</button>
+    <button class="day-tab" onclick="setDay(this, 'fre')">Fre</button>
+    <button class="day-tab" onclick="setDay(this, 'lor')">Lör</button>
+    <button class="day-tab" onclick="setDay(this, 'son')">Sön</button>
+  </div>
+ 
+  <div id="classGrid" class="class-grid"></div>
 </main>
  
 <footer>
