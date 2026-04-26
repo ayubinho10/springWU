@@ -20,13 +20,58 @@
   <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </nav>
  
+ 
 <main>
   <div class="section-header">
     <h1>Välj Din Plan</h1>
   </div>
-  <div class="card">Basic – 349 kr</div>
-  <div class="card">Premium – 549 kr</div>
-  <div class="card">VIP – 899 kr</div>
+ 
+  <div class="pricing-grid">
+ 
+    <div class="card pricing-card">
+      <h3 class="plan-name">Basic</h3>
+      <div class="plan-price">349 <span>kr/mån</span></div>
+      <p class="plan-period">Bindningstid 3 månader</p>
+      <ul class="plan-features">
+        <li>Tillgång till gymmet</li>
+        <li>Omklädningsrum</li>
+        <li>Öppet 6 till 22</li>
+        <li class="disabled">Gruppass</li>
+        <li class="disabled">PT-session</li>
+      </ul>
+      <button onclick="openModal()">Välj Basic</button>
+    </div>
+ 
+    <div class="card pricing-card featured">
+      <div class="badge">Populärast</div>
+      <h3 class="plan-name">Premium</h3>
+      <div class="plan-price">549 <span>kr/mån</span></div>
+      <p class="plan-period">Ingen bindningstid</p>
+      <ul class="plan-features">
+        <li>Tillgång till gymmet</li>
+        <li>Omklädningsrum</li>
+        <li>Obegränsat gruppass</li>
+        <li>Öppet 6 till 22</li>
+        <li class="disabled">PT-session</li>
+      </ul>
+      <button onclick="openModal()">Välj Premium</button>
+    </div>
+ 
+    <div class="card pricing-card">
+      <h3 class="plan-name">VIP</h3>
+      <div class="plan-price">899 <span>kr/mån</span></div>
+      <p class="plan-period">Ingen bindningstid</p>
+      <ul class="plan-features">
+        <li>Tillgång till gymmet</li>
+        <li>Omklädningsrum</li>
+        <li>Obegränsat gruppass</li>
+        <li>2 PT-sessioner per månad</li>
+        <li>24/7 access</li>
+      </ul>
+      <button onclick="openModal()">Välj VIP</button>
+    </div>
+ 
+  </div>
 </main>
  
 <footer>
