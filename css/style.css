@@ -1,10 +1,10 @@
---- css/style.css ---
 body {
   margin: 0;
   font-family: 'Barlow', sans-serif;
   background: #0a0a0a;
   color: #f5f5f5;
-  padding:0;
+  padding: 0;
+  overflow-x: hidden;
 }
  
 nav {
@@ -61,6 +61,7 @@ main {
   padding-left: 2rem;
   padding-right: 2rem;
   min-height: 100vh;
+  background: #0a0a0a;
 }
  
 
@@ -77,7 +78,6 @@ main {
     linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)),
     url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80') center/cover no-repeat;
 }
-  
  
 .hero h1 {
   font-family: 'Bebas Neue', sans-serif;
@@ -110,9 +110,42 @@ main {
 .hero button:hover {
   opacity: 0.85;
 }
+
+.stats-bar {
+  background: #e8ff00;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+  margin: 0 -2rem;
+}
  
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #0a0a0a;
+  line-height: 1;
+}
+ 
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.6);
+}
+ 
+
 .section-header {
   padding: 3rem 0 1.5rem;
+  background: #0a0a0a;
 }
  
 .section-header h1,
@@ -122,15 +155,29 @@ main {
   letter-spacing: 2px;
 }
  
+/* tjänstegrid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #222;
+  margin: 0 -2rem 3rem;
+}
+ 
+
 .card {
   background: #111;
   padding: 2rem;
-  margin: 1rem 0;
   transition: background 0.2s;
 }
  
 .card:hover {
   background: #161616;
+}
+ 
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
  
 .card h3 {
@@ -146,7 +193,109 @@ main {
   color: #888;
   line-height: 1.6;
 }
+
+.schedule-preview {
+  background: #111;
+  padding: 2rem;
+  margin: 0 -2rem 3rem;
+  border-top: 1px solid #222;
+}
  
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #222;
+}
+ 
+.schedule-time {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  color: #e8ff00;
+  min-width: 70px;
+}
+ 
+.schedule-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  flex: 1;
+  padding: 0 1rem;
+}
+ 
+.schedule-spots {
+  font-size: 0.8rem;
+  background: #222;
+  padding: 0.25rem 0.7rem;
+  color: #888;
+}
+ 
+.schedule-nav {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+ 
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid #333;
+  padding: 0.7rem 1.8rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+ 
+.btn-outline:hover {
+  border-color: #e8ff00;
+  color: #e8ff00;
+}
+ 
+
+.about-row {
+  background: #111;
+  padding: 4rem 2rem;
+  margin: 0 -2rem;
+  border-top: 1px solid #222;
+}
+ 
+.about-row h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+ 
+.about-row p {
+  color: #888;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+ 
+.btn-yellow {
+  background: #e8ff00;
+  color: #0a0a0a;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+ 
+.btn-yellow:hover {
+  opacity: 0.85;
+}
+ 
+
 footer {
   background: #111;
   border-top: 1px solid #222;
@@ -168,6 +317,7 @@ footer {
   color: #444;
 }
  
+
 .modal {
   display: none;
   position: fixed;
@@ -248,167 +398,7 @@ footer {
   margin-top: 0.5rem;
 }
  
-@media (max-width: 768px) {
-  nav { padding: 0.8rem 1.5rem; }
-  .nav-links { display: none; flex-direction: column; }
-  .nav-links.open {
-    display: flex;
-    position: fixed;
-    top: 62px;
-    left: 0;
-    right: 0;
-    background: #111;
-    padding: 1.5rem 2rem;
-    gap: 1.5rem;
-    border-bottom: 1px solid #222;
-    z-index: 999;
-  }
-  .menu-btn { display: block; }
-  .hero h1 { font-size: 3rem; }
-}
- .stats-bar {
-  background: #e8ff00;
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  padding: 1.5rem 2rem;
-  flex-wrap: wrap;
-  margin: 0 -2rem;
-}
- 
-.stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
- 
-.stat-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
-  color: #0a0a0a;
-  line-height: 1;
-}
- 
-.stat-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(0,0,0,0.6);
-  
-}
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: #222;
-  margin: 0 -2rem 3rem;
-}
- 
-.card-icon {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
- 
-  .services-grid { grid-template-columns: 1fr; }
-.schedule-preview {
-  background: #111;
-  padding: 2rem;
-  margin: 0 -2rem 3rem;
-  border-top: 1px solid #222;
-}
- 
-.schedule-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.9rem 0;
-  border-bottom: 1px solid #222;
-}
- 
-.schedule-time {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.3rem;
-  color: #e8ff00;
-  min-width: 70px;
-}
- 
-.schedule-name {
-  font-weight: 600;
-  font-size: 0.95rem;
-  flex: 1;
-  padding: 0 1rem;
-}
- 
-.schedule-spots {
-  font-size: 0.8rem;
-  background: #222;
-  padding: 0.25rem 0.7rem;
-  color: #888;
-}
- 
-.schedule-nav {
-  text-align: center;
-  margin-top: 1.5rem;
-}
- 
-.btn-outline {
-  background: transparent;
-  color: white;
-  border: 1px solid #333;
-  padding: 0.7rem 1.8rem;
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
- 
-.btn-outline:hover {
-  border-color: #e8ff00;
-  color: #e8ff00;
-}
-.about-row {
-  background: #111;
-  padding: 4rem 2rem;
-  margin: 0 -2rem;
-  border-top: 1px solid #222;
-}
- 
-.about-row h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
- 
-.about-row p {
-  color: #888;
-  font-size: 1rem;
-  line-height: 1.8;
-  max-width: 600px;
-  margin-bottom: 2rem;
-}
- 
-.btn-yellow {
-  background: #e8ff00;
-  color: #0a0a0a;
-  border: none;
-  padding: 0.8rem 2rem;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
- 
-.btn-yellow:hover {
-  opacity: 0.85;
-}
+
 .day-tabs {
   display: flex;
   gap: 0.5rem;
@@ -448,7 +438,9 @@ footer {
   padding: 2rem;
 }
  
-.class-card:hover { background: #161616; }
+.class-card:hover {
+  background: #161616;
+}
  
 .class-time {
   font-family: 'Bebas Neue', sans-serif;
@@ -464,12 +456,12 @@ footer {
   margin: 0.3rem 0;
 }
  
-.class-meta { font-size: 0.8rem; color: #888; }
-.about-full {
-  max-width: 700px;
-  padding: 0 0 2rem;
+.class-meta {
+  font-size: 0.8rem;
+  color: #888;
 }
-
+ 
+/* prisplaner */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -478,7 +470,9 @@ footer {
   margin: 0 -2rem 3rem;
 }
  
-.pricing-card { position: relative; }
+.pricing-card {
+  position: relative;
+}
  
 .pricing-card.featured {
   outline: 2px solid #e8ff00;
@@ -520,9 +514,17 @@ footer {
   color: #888;
 }
  
-.plan-period { font-size: 0.8rem; color: #888; margin-bottom: 1.5rem; }
+.plan-period {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
  
-.plan-features { list-style: none; margin-bottom: 2rem; padding: 0; }
+.plan-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
  
 .plan-features li {
   padding: 0.6rem 0;
@@ -530,7 +532,9 @@ footer {
   font-size: 0.9rem;
 }
  
-.plan-features li.disabled { color: #444; }
+.plan-features li.disabled {
+  color: #444;
+}
  
 .pricing-card button {
   width: 100%;
@@ -545,7 +549,15 @@ footer {
   cursor: pointer;
 }
  
-.pricing-card button:hover { opacity: 0.85; }
+.pricing-card button:hover {
+  opacity: 0.85;
+}
+ 
+
+.about-full {
+  max-width: 700px;
+  padding: 0 0 2rem;
+}
  
 .about-full p {
   color: #888;
@@ -561,4 +573,37 @@ footer {
   background: #222;
   margin: 0 -2rem 3rem;
 }
+ 
 
+@media (max-width: 768px) {
+  nav { padding: 0.8rem 1.5rem; }
+ 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+ 
+  .nav-links.open {
+    display: flex;
+    position: fixed;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid #222;
+    z-index: 999;
+  }
+ 
+  .menu-btn { display: block; }
+  .hero h1 { font-size: 3rem; }
+  .stats-bar { gap: 1.5rem; padding: 1.2rem; }
+ 
+  /* FIX: dessa hörde till media query men låg utanför */
+  .services-grid { grid-template-columns: 1fr; }
+  .class-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+ 
