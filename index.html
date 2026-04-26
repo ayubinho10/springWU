@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- 
+
 <nav>
   <img class="bild" src="img/G.png" alt="GAINZ Logo">
   <ul class="nav-links" id="navLinks">
@@ -19,13 +19,15 @@
   </ul>
   <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </nav>
- 
+
 <main>
+
   <div class="hero">
     <h1>TRÄNA HÅRDARE</h1>
     <p>Bli starkare med Gainz – gymmet för dig som menar allvar.</p>
     <button onclick="openModal()">Bli Medlem</button>
   </div>
+
   <div class="stats-bar">
     <div class="stat">
       <span class="stat-num">1200+</span>
@@ -38,8 +40,17 @@
     <div class="stat">
       <span class="stat-num">8</span>
       <span class="stat-label">PT-tränare</span>
-        <div class="section-header">
+    </div>
+    <div class="stat">
+      <span class="stat-num">24/7</span>
+      <span class="stat-label">Öppet</span>
+    </div>
+  </div>
+
+  <div class="section-header">
     <h2>Våra Tjänster</h2>
+  </div>
+
   <div class="services-grid">
     <div class="card">
       <div class="card-icon">🏋️</div>
@@ -57,15 +68,12 @@
       <p>Nå dina mål snabbare med en PT vid din sida.</p>
     </div>
   </div>
-    </div>
-    <div class="stat">
-      <span class="stat-num">24/7</span>
-      <span class="stat-label">Öppet</span>
-    </div>
-     <div class="section-header">
+
+
+  <div class="section-header">
     <h2>Dagens Pass</h2>
   </div>
- 
+
   <div class="schedule-preview">
     <div class="schedule-row">
       <span class="schedule-time">06:00</span>
@@ -91,15 +99,21 @@
       <a href="schema.html" class="btn-outline">Se hela schemat</a>
     </div>
   </div>
- 
+
+
+  <div class="about-row">
+    <h2>Byggt för de som menar allvar.</h2>
+    <p>Gainz grundades med en enkel idé – att skapa ett gym utan krångel. Bra utrustning, bra tränare och en community som pushar varandra framåt.</p>
+    <a href="contact.html" class="btn-yellow">Läs mer om oss</a>
   </div>
+
 </main>
- 
+
 <footer>
   <span class="footer-logo">GAINZ</span>
   <span class="footer-copy">© 2025 Gainz Gym</span>
 </footer>
- 
+
 <div id="modal" class="modal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -115,7 +129,7 @@
     <button onclick="submitForm()">Skicka Ansökan</button>
   </div>
 </div>
- 
+
 <script src="script.js"></script>
 </body>
 </html>
